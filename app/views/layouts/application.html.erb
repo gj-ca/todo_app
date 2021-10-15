@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <nav id="navbar">
+      <%= link_to "Todos", "/todos" %>
+      <%= link_to "New", "/todos/new" %>
+      <p>You are on the <%= content_for?(:page_name) ? yield(:page_name) : "Todos" %> page </p>
+    </nav>
     <%= yield %>
+    <footer>
+      <p>Footer</p>
+    </footer>
   </body>
 </html>

@@ -1,3 +1,20 @@
 // Place all the styles related to the todos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#todo-list {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px black;
+    background-color: whitesmoke;
+    justify-content: space-between;
+    .todo-item {
+      width: 30%;
+      background-color: salmon;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px auto;
+    }
+  }

@@ -1,1 +1,12 @@
 <h1>Todos Index</h1>
+<div id="todo-list">
+    <% @todo_items.each do |todo_item| %> 
+        <div>
+            <h1><%= todo_item.title %></h1>
+            <h4>Category: <%= todo_item.category.name %></h4>
+            <h4>User: <%= todo_item.user.name %></h4>
+            <%= link_to "Show Todo", "/todos/#{todo_item.id}" %>
+            <%= link_to "Edit Todo", "/todos/#{todo_item.id}/edit" %>
+        </div>
+    <% end %>
+</div>

@@ -1,12 +1,17 @@
 class TodosController < ApplicationController
 
-    @todos = []
-
-    
     def index
+        @todo_items = TodoItem.all
+    end
+    
+    def new
+    end
+    
+    def show
+        @todo_item = TodoItem.find(params[:id])
     end
 
-    def new
+    def edit
     end
 
     private
