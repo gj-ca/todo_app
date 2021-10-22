@@ -1,5 +1,9 @@
 <h1>Show todo page</h1>
-<h1><%= @todo_item.title %></h1>
-<h4><%= @todo_item.user.name %></h4>
-<h4><%= @todo_item.category.name %></h4>
+<% if @todo_item %>
+    <h1>Title:<%= @todo_item.title %></h1>
+    <h4>Name:<%= @todo_item.user.name %></h4>
+    <h4>Category:<%= @todo_item.category.name %></h4>
+<% else %>
+    <h1>No item found</h1>
+<% end %>
 <%= link_to "Go Back", :back %>

@@ -6,7 +6,8 @@
             <h4>Category: <%= todo_item.category.name %></h4>
             <h4>User: <%= todo_item.user.name %></h4>
             <%= link_to "Show Todo", "/todos/#{todo_item.id}" %>
-            <%= link_to "Edit Todo", "/todos/#{todo_item.id}/edit" %>
+            <%= link_to "Edit Todo", edit_todo_path(todo_item.id) %>
+            <%= link_to "Delete", "/todos/#{todo_item.id}", method: :delete %>
         </div>
     <% end %>
 </div>
