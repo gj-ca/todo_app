@@ -26,8 +26,8 @@ class TodosController < ApplicationController
     end
 
     def edit
-        @users = User.all
-        @categories = Category.all
+        @users = User.select(:name)
+        @categories = Category.select(:name)
     end
 
     def update
